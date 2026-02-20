@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Car Culture Hub</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <header class="hero reveal">
+            <p class="eyebrow">Driven by Design</p>
+            <h1>Car Culture Hub</h1>
+            <p class="subtitle">
+                Cars are more than transportation. They reflect engineering, design, speed, safety, and personality.
+                This page gives a detailed look at what makes modern cars exciting and how to choose one intelligently.
+            </p>
+            <img class="hero-photo" src="Porschegt3Rs.webp" alt="Porsche GT3 RS"/>
+        </header>
+
+        <main class="container">
+            <section class="panel photo-panel reveal">
+                <h2>Your Photo Spotlight</h2>
+                <img class="feature-photo" src="Porschegt3Rs.webp" alt="Porsche GT3 RS angled view"/>
+                <p class="photo-caption">
+                    This image now anchors the site visually and reinforces the performance-car theme.
+                </p>
+            </section>
+
+            <section class="panel reveal">
+                <h2>A Short History of Cars</h2>
+                <p>
+                    The first practical automobiles appeared in the late 1800s, powered by early internal combustion
+                    engines. In the 1900s, mass production transformed cars from luxury products into everyday tools.
+                    Over time, innovations like automatic transmissions, anti-lock brakes, fuel injection, and airbags
+                    made cars easier and safer to drive.
+                </p>
+                <p>
+                    Today, the industry is shifting again with electric vehicles, advanced driver assistance systems,
+                    and software-defined features. Modern cars combine mechanical engineering with computing power in a
+                    way that would have looked impossible a few decades ago.
+                </p>
+            </section>
+
+            <section class="panel reveal">
+                <h2>Popular Car Types</h2>
+                <div class="grid">
+                    <article class="card">
+                        <h3>Sedans</h3>
+                        <p>Balanced comfort, good fuel efficiency, and smooth daily driving.</p>
+                    </article>
+                    <article class="card">
+                        <h3>SUVs</h3>
+                        <p>Higher seating position, cargo space, and family-friendly versatility.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Hatchbacks</h3>
+                        <p>Compact size with practical rear cargo access for city life.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Pickup Trucks</h3>
+                        <p>Strong towing and payload performance for work and adventure.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Sports Cars</h3>
+                        <p>Lightweight design, fast acceleration, and performance-focused handling.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Electric Cars</h3>
+                        <p>Instant torque, lower emissions, and quiet driving with battery power.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel reveal">
+                <h2>Powertrain Guide</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Strengths</th>
+                            <th>Tradeoffs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gasoline</td>
+                            <td>Wide availability, fast refueling, many model choices</td>
+                            <td>Higher fuel costs over time, more emissions</td>
+                        </tr>
+                        <tr>
+                            <td>Hybrid</td>
+                            <td>Excellent efficiency, strong city mileage</td>
+                            <td>Higher initial cost than basic gas models</td>
+                        </tr>
+                        <tr>
+                            <td>Plug-In Hybrid</td>
+                            <td>Electric-only short trips plus gas backup</td>
+                            <td>Needs charging habit to maximize value</td>
+                        </tr>
+                        <tr>
+                            <td>Battery Electric</td>
+                            <td>Low running cost, smooth acceleration, no tailpipe emissions</td>
+                            <td>Charging time and station planning matter on long trips</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="panel reveal">
+                <h2>How to Choose the Right Car</h2>
+                <ol>
+                    <li>Set a full budget: purchase price, insurance, fuel/charging, and maintenance.</li>
+                    <li>Define your use case: commuting, road trips, family needs, or performance driving.</li>
+                    <li>Test drive at least 2-3 models to compare comfort, visibility, and handling.</li>
+                    <li>Check safety ratings and active safety features before deciding.</li>
+                    <li>Review reliability history and expected maintenance intervals.</li>
+                </ol>
+            </section>
+
+            <section class="panel reveal">
+                <h2>Basic Maintenance Checklist</h2>
+                <ul>
+                    <li>Engine oil and filter changes at recommended intervals.</li>
+                    <li>Tire pressure checks monthly and tire rotation every 5,000-8,000 miles.</li>
+                    <li>Brake inspections for pad wear and fluid condition.</li>
+                    <li>Battery health checks before extreme summer or winter weather.</li>
+                    <li>Cabin and engine air filter replacement for efficiency and air quality.</li>
+                </ul>
+            </section>
+
+            <section class="panel featured reveal">
+                <h2>Featured Icons</h2>
+                <p>
+                    Some cars become legends through design, racing success, reliability, or cultural impact.
+                    Examples include the Porsche 911, Toyota Supra, Ford Mustang, Honda Civic Type R, and Nissan GT-R.
+                    These models show how cars can become symbols of entire generations.
+                </p>
+                <p>
+                    Want this section personalized? We can swap this list with your favorite brands and specific models.
+                </p>
+            </section>
+        </main>
+        <script>
+            const revealItems = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.18,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealItems.forEach((item) => observer.observe(item));
+        </script>
+    </body>
+</html>
